@@ -3,9 +3,9 @@ import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 
-public class FrmContador extends javax.swing.JFrame implements Observer{
+public class FrmCounter extends javax.swing.JFrame implements Observer{
 
-    public FrmContador() {
+    public FrmCounter() {
         initComponents();
     }
 
@@ -70,10 +70,10 @@ public class FrmContador extends javax.swing.JFrame implements Observer{
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
 
-            java.util.logging.Logger.getLogger(FrmContador.class.getName()).log(java.util.logging
+            java.util.logging.Logger.getLogger(FrmCounter.class.getName()).log(java.util.logging
                     .Level.SEVERE, null, ex);
         }
-        java.awt.EventQueue.invokeLater(() -> new FrmContador().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new FrmCounter().setVisible(true));
     }
     private javax.swing.JButton btnStart;
     private javax.swing.JLabel lblTimer;
