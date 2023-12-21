@@ -10,14 +10,14 @@ public class FrmContador extends javax.swing.JFrame implements Observer{
     }
 
     private void initComponents() {
-        lblCronometro = new javax.swing.JLabel();
-        btnIniciar = new javax.swing.JButton();
+        lblTimer = new javax.swing.JLabel();
+        btnStart = new javax.swing.JButton();
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Reloj digital");
-        lblCronometro.setFont(new java.awt.Font("Tahoma", Font.BOLD, 48)); // NOI18N
-        btnIniciar.setFont(new java.awt.Font("Tahoma", Font.PLAIN, 18)); // NOI18N
-        btnIniciar.setText("Iniciar");
-        btnIniciar.addActionListener(this::btnIniciarActionPerformed);
+        setTitle("DIGITAL CLOCK");
+        lblTimer.setFont(new java.awt.Font("Arial", Font.BOLD, 48)); // NOI18N
+        btnStart.setFont(new java.awt.Font("Arial", Font.PLAIN, 18)); // NOI18N
+        btnStart.setText("START");
+        btnStart.addActionListener(this::btnStartActionPerformed);
         javax.swing.GroupLayout layout = new
                 javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -25,12 +25,12 @@ public class FrmContador extends javax.swing.JFrame implements Observer{
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addGap(22, 22, 22)
-                                .addComponent(lblCronometro,
+                                .addComponent(lblTimer,
                                         javax.swing.GroupLayout.PREFERRED_SIZE, 246,
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
 
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btnIniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 97,
+                                .addComponent(btnStart, javax.swing.GroupLayout.DEFAULT_SIZE, 97,
                                         Short.MAX_VALUE)
                                 .addContainerGap())
         );
@@ -41,18 +41,18 @@ public class FrmContador extends javax.swing.JFrame implements Observer{
 
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING
                                         )
-                                        .addComponent(lblCronometro,
+                                        .addComponent(lblTimer,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnIniciar, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        .addComponent(btnStart, javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 129, Short.MAX_VALUE))
                                 .addContainerGap())
         );
         pack();
     }
 
-    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {
-        this.btnIniciar.setEnabled(false);
+    private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {
+        this.btnStart.setEnabled(false);
         RelojDigital r = new RelojDigital(23, 59, 50);
         r.addObserver(this);
         Thread t = new Thread(r);
@@ -75,10 +75,10 @@ public class FrmContador extends javax.swing.JFrame implements Observer{
         }
         java.awt.EventQueue.invokeLater(() -> new FrmContador().setVisible(true));
     }
-    private javax.swing.JButton btnIniciar;
-    private javax.swing.JLabel lblCronometro;
+    private javax.swing.JButton btnStart;
+    private javax.swing.JLabel lblTimer;
     @Override
     public void update(Observable o, Object arg) {
-        lblCronometro.setText((String) arg);
+        lblTimer.setText((String) arg);
     }
 }
