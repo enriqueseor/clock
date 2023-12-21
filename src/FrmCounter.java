@@ -53,7 +53,7 @@ public class FrmCounter extends javax.swing.JFrame implements Observer{
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {
         this.btnStart.setEnabled(false);
-        RelojDigital r = new RelojDigital(23, 59, 50);
+        DigitalClock r = new DigitalClock(0, 0, 0);
         r.addObserver(this);
         Thread t = new Thread(r);
         t.start();
