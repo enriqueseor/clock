@@ -11,7 +11,6 @@ This program consist on a digital clock made using [Java](https://www.java.com/e
 - Start clock.
 - Enjoy your digital clock.
 
-
 ## Getting Started
 
 To use Java Digital Clock follow these steps:
