@@ -4,7 +4,7 @@ This program consist on a digital clock made using [Java](https://www.java.com/e
 
 ## Table of Contents
 - [Features](#Features)
-- [Getting Started](#Getting Started)
+- [Getting Started](#getting-started)
 - [License](#license)
 
 ## Features
