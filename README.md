@@ -1,4 +1,4 @@
-# Java Clock
+# Java Digital Clock
 
 This program consist on a digital clock made using [Java](https://www.java.com/es/).
 
@@ -14,7 +14,7 @@ This program consist on a digital clock made using [Java](https://www.java.com/e
 
 ## Getting Started
 
-To use Horse Race follow these steps:
+To use Java Digital Clock follow these steps:
 - Clone this repository: git clone https://github.com/enriqueseor/clock.git
 - Open the project in IntelliJ or similar IDE.
 - Build and run the app.
